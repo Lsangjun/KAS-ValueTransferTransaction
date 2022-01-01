@@ -1,0 +1,5 @@
+1. person1, b'{"code":1065001,"message":"failed to send a raw transaction to klaytn node; insufficient funds of the sender for value ","requestId":"23281dc0-5c06-4981-95b9-327b5e7bea74"}'
+
+
+2. person2, b'{"code":1065001,"message":"failed to send a raw transaction to klaytn node; insufficient funds of the sender for value ","requestId":"ecdfec27-591b-477b-8089-ca735a2b0810"}'
+
