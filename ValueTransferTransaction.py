@@ -7,35 +7,31 @@ import time
 # Klaytn Wallet API - https://refs.klaytnapi.com/ko/wallet/latest
 
 
-
 # 1 klay = 10^18 peb
 # https://ko.docs.klaytn.com/klaytn/design/klaytn-native-coin-klay
 KLAY = 0.02
 PEB = int(10**18 * KLAY)
 HEX_PEB = hex(PEB)
 
-
 # POST - Sending KLAY
 url = "https://wallet-api.klaytnapi.com/v2/tx/value"
-
 
 # CSV
 file = open("wallet_list_sample.csv", 'r')
 reader = csv.reader(file)
 students = [line for line in reader]
 
-
 # log
 log = open("log", 'w+')
 failed = []
 counter = 1
-
 
 for student in students:
     time.sleep(3)
     name, wallet = student[0], student[1]
 
     headers = {
+        # Cypress(8217) or Baobab(1001) 
         "x-chain-id": "1001",
         "Authorization": "AUTHORIZATION"
     }
